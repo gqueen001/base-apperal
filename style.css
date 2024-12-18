@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to left, hsl(0, 100%, 98%), hsl(0, 0%, 100%));
+}
+
+.attribution {
+  display: flex;
+  width: 100%;
+  max-height: 700px;
+  height: 100%;
+}
+
+.info-section {
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.info-section > img {
+  height: 100%;
+  width: 100%;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  max-width: 505px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.header {
+  width: min-content;
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 10px;
+  color: #413a3a;
+}
+
+.header > span {
+  font-weight: 300;
+}
+
+p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.header > span,
+p {
+  color: #ce9797;
+}
+
+button {
+  all: unset;
+  background: linear-gradient(to left, #ee8c8c, hsl(0, 80%, 86%));
+  width: 80px;
+  display: flex;
+  box-shadow: 0px 13px 25px 0px #ce9797;
+  cursor: pointer;
+}
+
+button > img {
+  margin: auto;
+}
+
+.submit-section {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  box-shadow: 0px 0px 0px 1px #ce9797;
+}
+
+input {
+  all: unset;
+  margin: 0px 0px 0px 30px;
+  width: 70%;
+  color: #413a3a;
+}
+
+::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+button,
+.submit-section {
+  border-radius: 20px;
+}
+
+.info > div:nth-child(3) {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info > div:nth-child(1) {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background: #f8bfbf;
+}
+
+.submit-section > img {
+  height: 24px;
+  margin: auto;
+  display: none;
+}
+
+.error {
+  margin: 10px 0px 0px 30px;
+  color: #f96262;
+}
+
+.hero-mobile {
+  display: none;
+  width: 100%;
+}
+
+.hero-mobile > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1020px) {
+  .attribution > img,
+  .info-section > img {
+    display: none;
+  }
+
+  .hero-mobile {
+    display: block;
+  }
+
+  .attribution {
+    max-height: 100%;
+  }
+
+  .info > div:nth-child(3) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  p {
+    max-width: 410px;
+    text-align: center;
+  }
+
+  .info > div:nth-child(1) {
+    margin: 0 0 0 10%;
+  }
+
+  .info-section {
+    margin: 10px 0 0 0;
+  }
+}
